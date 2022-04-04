@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace ConsoleApp4
+namespace ConsoleApp4.Accounts
 {
 	internal class Account
 	{
 		public string Login { get; private set; }
 		public string Password { get; private set; }
-		public string Name { get; set; }
+		public string Name { get; private set; }
 
 
 		public Account(string login, string password, string name)

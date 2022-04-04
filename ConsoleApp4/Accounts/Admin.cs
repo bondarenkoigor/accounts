@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace ConsoleApp4
+namespace ConsoleApp4.Accounts
 {
     internal class Admin : Account
     {
@@ -25,6 +25,12 @@ namespace ConsoleApp4
         public void logManager(Manager manager)
         {
             logManager(string.Format($"{Login}.txt"), manager);
+        }
+
+        public void clearLogs()
+        {
+            if (!File.Exists(Login + ".txt")) return;
+            File.WriteAllText(Login + ".txt", "");
         }
 
         public Manager[] readManagers()
